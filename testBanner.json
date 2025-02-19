@@ -1,0 +1,13 @@
+{
+    "code": 1,
+    "text": "https://google.com",
+    "write": 0,
+    "userAgent": {
+        "codeUserAgent": 0,
+        "textUserAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/73.0.3683.75 Chrome/73.0.3683.75 Safari/537.36",
+        "writeUserAgent": 0
+    },
+    "finTexts": ["ad.unidragonsmedia.com"],
+    "bFlag": 1,
+    "bUrl": "https://gorokhovbet.ru/PHP/avia/Banner/v2.1?channel=vobotest1&buttonLabel=HOW%20TO%20WIN%3F"
+}

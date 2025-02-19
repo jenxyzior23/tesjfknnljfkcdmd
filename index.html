@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Our Telegram Channel</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            /* align-items: center; */
+            background-color: #FFF;
+        }
+        button {
+            background-color: blue;
+            color: white;
+            padding: 10px;	 
+        }.telegram-button {
+            display: block;
+            width: 100%;
+            padding: 20px;
+            background-color: #0088cc;
+            color: #fff;
+            font-size: 24px;
+            text-align: center;
+            text-decoration: none;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .telegram-button:hover {
+            background-color: #005580;
+        }
+    </style>
+</head>
+<body>
+    <button id="telegramButton" class="telegram-button">Join Our Telegram Channel</button>
+
+    <script>
+        document.getElementById('telegramButton').addEventListener('click', function() {
+            var channelID = getParameterByName('channel');
+            if (channelID) {
+                window.location.href = 'https://t.me/' + channelID;
+            }
+        });
+
+        // Function to get URL parameters
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+        // Set button label from URL parameter
+        var buttonLabel = getParameterByName('buttonLabel');
+        if (buttonLabel) {
+            document.getElementById('telegramButton').textContent = buttonLabel;
+        }
+    </script>
+</body>
+</html>
